@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import logger from 'redux-logger';
+import reduxThunk from 'redux-thunk';
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import App from './components/App';
-import wallet from './reducers';
+import reducers from './reducers';
 import registerServiceWorker from './registerServiceWorker';
 
-const store = createStore(wallet);
+const store = createStore(
+  reducers,
+  applyMiddleware(logger),
+  applyMiddleware(reduxThunk),
+);
 
 ReactDOM.render(
   <Provider store={store}>

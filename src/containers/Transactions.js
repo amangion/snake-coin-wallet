@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { getTransactions } from '../actions';
+import { fetchTransactions } from '../actions';
 import TransactionList from '../components/TransactionList';
 
 const mapStateToProps = state => ({
@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   onUpdateClick: () => {
-    dispatch(getTransactions());
+    dispatch(fetchTransactions());
   },
 });
 
