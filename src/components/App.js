@@ -1,16 +1,10 @@
-import React, { Component } from 'react';
-import TransactionList from './TransactionList';
+import React from 'react';
+import Transactions from '../containers/Transactions';
 
-class App extends Component {
-  render() {
-    const transactions = [1, 2, 3];
-
-    return (
-      <div className="App">
-        <TransactionList transactions={transactions} />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div className="App">
+    <Transactions />
+  </div>
+);
 
 export default App;
