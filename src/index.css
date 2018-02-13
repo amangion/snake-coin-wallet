@@ -13,6 +13,7 @@ body {
 
 /* Custom page header */
 .header {
+  display: flex;
   padding-bottom: 1rem;
   border-bottom: .05rem solid #e5e5e5;
 }
@@ -21,6 +22,10 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 3rem;
+}
+
+.nav-bar {
+  margin-left: auto;
 }
 
 /* Custom page footer */
