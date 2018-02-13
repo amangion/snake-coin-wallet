@@ -1,19 +1,20 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Nav, NavItem, NavLink } from 'reactstrap';
+import { NavLink as RRNavLink } from 'react-router-dom';
 
 const NavBar = () => (
   <div className={classNames('header', 'clearfix')}>
     <h3 className="text-muted">Snake coins wallet</h3>
     <Nav pills className="nav-bar">
       <NavItem>
-        <NavLink active href="#">Transactions</NavLink>
+        <NavLink to="/" tag={RRNavLink}>Transactions</NavLink>
       </NavItem>
       <NavItem>
-        <NavLink href="#">Send</NavLink>
+        <NavLink to="/send" tag={RRNavLink}>Send</NavLink>
       </NavItem>
       <NavItem>
-        <NavLink href="#">Receive</NavLink>
+        <NavLink to="receive" tag={RRNavLink} >Receive</NavLink>
       </NavItem>
     </Nav>
   </div>

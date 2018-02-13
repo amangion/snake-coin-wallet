@@ -4,11 +4,13 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import reduxThunk from 'redux-thunk';
+import { BrowserRouter, Route} from 'react-router-dom';
+
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
-import App from './components/App';
 import reducers from './reducers';
 import registerServiceWorker from './registerServiceWorker';
+import App from './components/App';
 
 const store = createStore(
   reducers,
@@ -18,7 +20,9 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <Route exact path="/" component={App} />
+    </BrowserRouter>
   </Provider>,
   document.getElementById('root'),
 );
