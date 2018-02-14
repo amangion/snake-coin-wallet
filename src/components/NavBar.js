@@ -8,13 +8,10 @@ const NavBar = () => (
     <h3 className="text-muted">Snake coins wallet</h3>
     <Nav pills className="nav-bar">
       <NavItem>
-        <NavLink to="/" tag={RRNavLink}>Transactions</NavLink>
+        <NavLink active to="/" tag={RRNavLink}>Transactions</NavLink>
       </NavItem>
       <NavItem>
         <NavLink to="/send" tag={RRNavLink}>Send</NavLink>
-      </NavItem>
-      <NavItem>
-        <NavLink to="receive" tag={RRNavLink} >Receive</NavLink>
       </NavItem>
     </Nav>
   </div>
