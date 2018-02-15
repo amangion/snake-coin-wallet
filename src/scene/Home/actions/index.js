@@ -1,6 +1,4 @@
 import axios from 'axios';
-import { push } from 'react-router-redux';
-import {reset} from 'redux-form';
 
 export const FETCH_TRANSACTIONS = 'FETCH_TRANSACTIONS';
 export const FETCH_TRANSACTIONS_SUCCESS = 'FETCH_TRANSACTIONS_SUCCESS';
@@ -33,13 +31,10 @@ export const sendPaymentSuccess = data => ({
 });
 
 export const sendPayment = data => async (dispatch) => {
-
   dispatch({ type: SEND_PAYMENT, data });
   try {
     const response = await axios.post(`${ROOT_URL}/transactions`, data);
     dispatch(sendPaymentSuccess(response.data));
-    dispatch(reset('send'));
-    dispatch(push('/home'));
   } catch (e) {
     dispatch({ type: SEND_PAYMENT_FAILURE });
   }

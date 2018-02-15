@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 import { routerReducer } from 'react-router-redux';
-import authReducer from '../scene/Login/reducers';
-import transactions from '../scene/Home/reducers';
+import transactions from './scene/Home/reducers';
+import authReducer from './scene/Login/reducers';
 
 const wallet = combineReducers({
   transactions,
@@ -12,3 +12,4 @@ const wallet = combineReducers({
 });
 
 export default wallet;
+

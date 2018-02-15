@@ -1,28 +1,27 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import logger from 'redux-logger';
-import reduxThunk from 'redux-thunk';
-import { BrowserRouter } from 'react-router-dom';
-
+import { render } from 'react-dom';
+import { ConnectedRouter } from 'react-router-redux';
+import { Route, Switch } from 'react-router';
+import createHistory from 'history/createBrowserHistory';
 import 'bootstrap/dist/css/bootstrap.css';
-import './index.css';
-import reducers from './reducers';
 import registerServiceWorker from './registerServiceWorker';
-import App from './components/App';
+import Singin from './scene/Login/components/Signin';
+import App from './scene/Home/components/App';
+import PrivateRoute from './PrivateRoute';
+import prepareStore from "./store";
 
-const store = createStore(
-  reducers,
-  applyMiddleware(logger),
-  applyMiddleware(reduxThunk),
-);
+const history = createHistory();
+const store = prepareStore(history)
 
-ReactDOM.render(
+render(
   <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <ConnectedRouter history={history}>
+      <Switch>
+        <Route path="/login" component={Singin} />
+        <PrivateRoute exact component={App} />
+      </Switch>
+    </ConnectedRouter>
   </Provider>,
   document.getElementById('root'),
 );
