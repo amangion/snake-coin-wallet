@@ -8,7 +8,7 @@ const NavBar = () => (
     <h3 className="text-muted">Snake coins wallet</h3>
     <Nav pills className="nav-bar">
       <NavItem>
-        <NavLink active to="/" tag={RRNavLink}>Transactions</NavLink>
+        <NavLink exact to="/" tag={RRNavLink}>Transactions</NavLink>
       </NavItem>
       <NavItem>
         <NavLink to="/send" tag={RRNavLink}>Send</NavLink>
