@@ -1,4 +1,5 @@
 import axios from 'axios';
+import ROOT_URL from '../../config';
 
 export const FETCH_TRANSACTIONS = 'FETCH_TRANSACTIONS';
 export const FETCH_TRANSACTIONS_SUCCESS = 'FETCH_TRANSACTIONS_SUCCESS';
@@ -7,8 +8,6 @@ export const FETCH_TRANSACTIONS_FAILURE = 'FETCH_TRANSACTIONS_FAILURE';
 export const SEND_PAYMENT = 'SEND_PAYMENT';
 export const SEND_PAYMENT_SUCCESS = 'SEND_PAYMENT_SUCCESS';
 export const SEND_PAYMENT_FAILURE = 'SEND_PAYMENT_FAILURE';
-
-const ROOT_URL = 'http://localhost:4040/api';
 
 export const showTransactions = data => ({
   type: FETCH_TRANSACTIONS_SUCCESS,
