@@ -14,7 +14,7 @@ const LoginForm = (props) => {
         <Field
           className="form-control"
           type="text"
-          name="login"
+          name="username"
           id="login"
           component="input"
           placeholder="Login"

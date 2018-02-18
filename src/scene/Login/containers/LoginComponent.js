@@ -1,18 +1,13 @@
 import { connect } from 'react-redux';
-import { push } from 'react-router-redux';
-import { reset } from 'redux-form';
+
 import LoginForm from '../components/LoginForm';
-import { authSuccess } from '../actions/index';
+import { singupUser } from '../actions/index';
 
 const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onSubmit: (data) => {
-    dispatch(authSuccess(data));
-    dispatch(push('/'));
-    dispatch(reset('loginForm'));
-  },
+  onSubmit: data => dispatch(singupUser(data)),
 });
 
 const LoginComponent = connect(

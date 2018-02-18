@@ -8,7 +8,7 @@ const wallet = combineReducers({
   transactions,
   form: formReducer,
   routerReducer,
-  authReducer,
+  auth: authReducer,
 });
 
 export default wallet;

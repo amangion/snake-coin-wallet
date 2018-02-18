@@ -1,14 +1,18 @@
-const authReducer = (state = { isAuthenticated: false }, action) => {
+const authReducer = (state = { isAuthenticated: false, token: '' }, action) => {
   switch (action.type) {
-    case 'AUTH_SUCCESS':
+    case 'SING_UP_USER_SUCCESS':
       return {
         ...state,
         isAuthenticated: true,
+        token: action.data.token,
+        currentUser: action.data.username,
       };
     case 'AUTH_FAIL':
       return {
         ...state,
         isAuthenticated: false,
+        token: '',
+        currentUser: '',
       };
     default:
       return state;

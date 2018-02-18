@@ -9,10 +9,10 @@ import registerServiceWorker from './registerServiceWorker';
 import Singin from './scene/Login/components/Signin';
 import App from './scene/Home/components/App';
 import PrivateRoute from './PrivateRoute';
-import prepareStore from "./store";
+import prepareStore from './store';
 
 const history = createHistory();
-const store = prepareStore(history)
+const store = prepareStore(history);
 
 render(
   <Provider store={store}>
