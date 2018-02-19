@@ -28,6 +28,14 @@ body {
   margin-left: auto;
 }
 
+.transactionListHeader {
+  display: flex;
+}
+
+.transactionListHeader .updateButton {
+  margin-left: auto;
+}
+
 /* Custom page footer */
 .footer {
   padding-top: 1.5rem;

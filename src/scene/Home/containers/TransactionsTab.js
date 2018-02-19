@@ -1,14 +1,18 @@
 import { connect } from 'react-redux';
-import { fetchTransactions } from '../actions';
+import { fetchTransactions, getBalance } from '../actions';
 import TransactionList from '../components/TransactionList';
 
 const mapStateToProps = state => ({
   transactions: state.transactions,
+  balance: state.balance,
 });
 
 const mapDispatchToProps = dispatch => ({
   onUpdateClick: () => {
     dispatch(fetchTransactions());
+  },
+  getBalance: () => {
+    dispatch(getBalance());
   },
 });
 
