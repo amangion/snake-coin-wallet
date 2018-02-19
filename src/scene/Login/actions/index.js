@@ -12,6 +12,7 @@ export const singupUser = data => async (dispatch) => {
   dispatch({ type: SING_UP_USER });
   try {
     const response = await axios.post(`${ROOT_URL}/auth/login`, data);
+    sessionStorage.setItem('token', response.data.token);
     dispatch([{ type: SING_UP_USER_SUCCESS, data: response.data }, push('/'), reset('loginForm')]);
   } catch (e) {
     dispatch({ type: SING_UP_USER_FAILURE });
