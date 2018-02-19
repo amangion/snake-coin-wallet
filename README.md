@@ -18,4 +18,4 @@ yarn start
 ```
 
 ## Application screenshot:
-![Swagger api doc](https://github.com/amangion/snake-coin-wallet/blob/master/img/dashboard.png?raw=true)
+![Swagger api doc](https://github.com/amangion/snake-coin-wallet/blob/develop/img/dashboard.png?raw=true)
