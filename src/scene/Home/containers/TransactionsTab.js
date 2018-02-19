@@ -10,6 +10,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   onUpdateClick: () => {
     dispatch(fetchTransactions());
+    dispatch(getBalance());
   },
   getBalance: () => {
     dispatch(getBalance());

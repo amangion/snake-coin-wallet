@@ -4,7 +4,7 @@ const Transaction = (porps) => {
   const { from, to, amount } = porps;
   return (
     <div>
-      {`${from} -> ${to} ${amount}`}
+      {'From '}<b>{from}</b>{' to '}<b>{to}</b>{' Transaction amount:'}<b>{amount}$</b>
     </div>
   );
 };
