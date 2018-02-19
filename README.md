@@ -8,8 +8,8 @@ yarn
 ```
 
 ## Configuration
+Set proper api url in the config file:
 ```bash
-Set proper api in the config file:
 ./src/scene/config.js
 ```
 ## Run:
