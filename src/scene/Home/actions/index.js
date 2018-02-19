@@ -71,7 +71,7 @@ export const getBalance = data => async (dispatch) => {
   try {
     const response = await axios({
       method: 'post',
-      url: `${ROOT_URL}/blocks/balance`,
+      url: `${ROOT_URL}/transactions/balance`,
       headers: {
         Authorization: `Bearer ${sessionStorage.getItem('token')}`,
       },
