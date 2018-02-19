@@ -13,6 +13,7 @@ class TransactionTab extends React.Component {
       onUpdateClick,
       transactions,
       balance,
+      currentUser
     } = this.props;
 
     const items = transactions.map(item => (
@@ -23,7 +24,7 @@ class TransactionTab extends React.Component {
     return (
       <div>
         <div className="transactionListHeader">
-          <span>Current balance: {balance}$</span>
+          <span>User: <b>{currentUser}</b> Current balance: <b>{balance}$</b></span>
           <Button className="updateButton" color="info" onClick={() => onUpdateClick()}>Update transactions</Button>{' '}
         </div>
         <p />

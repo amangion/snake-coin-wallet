@@ -5,6 +5,7 @@ import TransactionList from '../components/TransactionList';
 const mapStateToProps = state => ({
   transactions: state.transactions,
   balance: state.balance,
+  currentUser: state.auth.currentUser,
 });
 
 const mapDispatchToProps = dispatch => ({
